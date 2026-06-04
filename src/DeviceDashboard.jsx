@@ -112,7 +112,7 @@ const calculatePercentageLabel = (count, total) => {
 <header style={styles.header}>
     
       <div>
-        <h1 style={styles.headerTitle}>Tablet Dashboard Monitor</h1>
+        <h1 style={styles.headerTitle}>Tablet Status Monitor</h1>
         {/* <p style={styles.headerSubtitle}>Real-time Cordova Handset Synchronization Grid</p> */}
       </div>
       
