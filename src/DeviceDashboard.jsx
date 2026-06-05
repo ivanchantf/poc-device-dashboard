@@ -261,14 +261,14 @@ const calculatePercentageLabel = (count, total) => {
 };
 
 const styles = {
-  container: { padding: '32px', fontFamily: '-apple-system, system-ui, sans-serif', backgroundColor: '#F3F4F6', minHeight: '100vh' },
+  container: { padding: '0px', fontFamily: '-apple-system, system-ui, sans-serif', backgroundColor: '#F3F4F6', minHeight: '100vh' },
   loading: { display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', color: '#4B5563', fontSize: '1.1rem' },
-  header: {  display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', padding: '10px', borderBottom: '1px solid #E5E7EB' },
+  header: { backgroundColor: '#e4eaf3ff', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', padding: '5px 20px', borderBottom: '1px solid #E5E7EB' },
   headerTitle: { margin: 0, fontSize: '1.6rem', color: '#111827', fontWeight: 700 },
   headerSubtitle: { margin: '4px 0 0 0', color: '#6B7280', fontSize: '0.85rem' },
   badgeContainer: { display: 'flex', alignItems: 'center', gap: '8px', backgroundColor: '#FFFFFF', padding: '8px 16px', borderRadius: '24px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)', fontSize: '0.9rem', color: '#374151', fontWeight: 500 },
   badgePulse: { width: '8px', height: '8px', backgroundColor: '#10B981', borderRadius: '50%' },
-  grid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '20px' },
+  grid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '20px',padding:'0px 20px' },
   card: { borderRadius: '12px', padding: '18px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03)', display: 'flex', flexDirection: 'column', gap: '10px' },
   cardHeader: { display: 'flex', alignItems: 'center', gap: '6px' },
   statusDot: { width: '6px', height: '6px', borderRadius: '50%' },
