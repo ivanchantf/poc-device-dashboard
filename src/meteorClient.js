@@ -4,7 +4,7 @@ import { simpleddpCore } from 'simpleddp-core';
 
 // Dev: 'ws://localhost:3000/websocket'
 // Prod: 'wss://your-meteor-backend-domain.com/websocket'
-export const METEOR_WS_ENDPOINT = 'ws://localhost:3000/websocket'; 
+export const METEOR_WS_ENDPOINT = import.meta.env.VITE_REACT_WEB_SOCKET_PATH || 'ws://localhost:3000/websocket'; 
 
 export const meteorConnection = new simpleDDP({
     endpoint: METEOR_WS_ENDPOINT,
