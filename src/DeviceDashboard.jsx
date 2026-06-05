@@ -216,7 +216,16 @@ const calculatePercentageLabel = (count, total) => {
                 </span>
               </div>
               <span style={{ display: 'block', fontSize: '5rem', textAlign: 'center', margin: '20px 20px' }}>
-                📱
+                      <div className={`device-status ${isOnline ? 'online' : 'offline'}`}>
+                          <svg class="tablet-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                              <rect class="bezel" x="15" y="5" width="70" height="90" rx="8" ry="8" />
+                              <rect class="screen" x="20" y="12" width="60" height="70" rx="2" ry="2" />
+                              <circle class="camera" cx="50" cy="8.5" r="1.5" />
+                              <circle class="home-button" cx="50" cy="89" r="3" />
+                              <circle class="status-dot" cx="74" cy="18" r="4" />
+                          </svg>
+
+                      </div>
                 </span>
               <h3 style={styles.uuidText} title={device.deviceUuid}>
                 
@@ -254,7 +263,7 @@ const calculatePercentageLabel = (count, total) => {
 const styles = {
   container: { padding: '32px', fontFamily: '-apple-system, system-ui, sans-serif', backgroundColor: '#F3F4F6', minHeight: '100vh' },
   loading: { display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', color: '#4B5563', fontSize: '1.1rem' },
-  header: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px', paddingBottom: '16px', borderBottom: '1px solid #E5E7EB' },
+  header: {  display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', padding: '10px', borderBottom: '1px solid #E5E7EB' },
   headerTitle: { margin: 0, fontSize: '1.6rem', color: '#111827', fontWeight: 700 },
   headerSubtitle: { margin: '4px 0 0 0', color: '#6B7280', fontSize: '0.85rem' },
   badgeContainer: { display: 'flex', alignItems: 'center', gap: '8px', backgroundColor: '#FFFFFF', padding: '8px 16px', borderRadius: '24px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)', fontSize: '0.9rem', color: '#374151', fontWeight: 500 },
@@ -364,5 +373,6 @@ const styles = {
   progressSegment: {
     height: '100%',
     transition: 'width 0.4s cubic-bezier(0.4, 0, 0.2, 1)' // Smooth resizing animation
-  },
+  }
+  
 };

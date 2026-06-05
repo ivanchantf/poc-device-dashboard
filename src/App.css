@@ -182,3 +182,21 @@
     border-right-color: var(--border);
   }
 }
+/* Base Styles */
+.tablet-icon {
+  width: 60px;
+  height: 60px;
+}
+.tablet-icon .bezel { fill: #2c3e50; }
+.tablet-icon .camera { fill: #7f8c8d; }
+.tablet-icon .home-button { fill: none; stroke: #bdc3c7; stroke-width: 1.5; }
+.tablet-icon .status-dot { stroke: #ffffff; stroke-width: 1; }
+
+/* Dynamic Status Styles */
+.device-status.online .screen { fill: #ebf5fb; } /* Light blue screen */
+.device-status.online .status-dot { fill: #2ecc71; } /* Green dot */
+
+.device-status.offline .screen { fill: #fdf2e9; } /* Faded background */
+.device-status.offline .status-dot { fill: #e74c3c; } /* Red dot */
+
+.device-status.warning .status-dot { fill: #f1c40f; } /* Yellow dot */
