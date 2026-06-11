@@ -314,7 +314,10 @@ export const DeviceDashboard = () => {
               <h3 style={styles.uuidText} title={device.deviceUuid}>
                 UUID: {device.deviceUuid ? device.deviceUuid : 'N/A'}
               </h3>
-              
+              <h6 style={styles.modelText} title={device.model}>
+                {device.manufacturer.toUpperCase() + ' ' + device.model || ''}
+              </h6>
+      
               {/* --- ROOMS DISPLAY LAYER --- */}
               <div style={styles.roomsWrapper}>
                 {assignedRooms.length === 0 ? (
@@ -335,6 +338,16 @@ export const DeviceDashboard = () => {
               </div>
               
               <div style={styles.body}>
+                {/* <div style={styles.dataRow}>
+                  <span style={styles.label}>Model:</span>
+                  <span style={styles.value}>{device.manufacturer.toUpperCase() + ' ' + device.model || ''}</span>
+                </div> */}
+                {/* <div style={styles.dataRow}>
+                  <span style={styles.label}>Platform:</span>
+                  <span style={styles.value}>{`${device.platform} ${device.version || ''} [SDK:${device.sdkVersion || ''}]`  || ''}</span>
+                </div> */}
+
+
                 <div style={styles.dataRow}>
                   <span style={styles.label}>Network IP:</span>
                   <span style={styles.value}>{device.ipAddress || 'Internal Loopback'}</span>
@@ -372,6 +385,7 @@ const styles = {
   statusDot: { width: '6px', height: '6px', borderRadius: '50%' },
   statusText: { fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.05em' },
   uuidText: { fontSize: '1rem', margin: 0, color: '#1F2937', fontWeight: 600, wordBreak: 'break-all' },
+  modelText: { fontSize: '1rem', margin: 0, color: '#696969ff', fontWeight: 600, wordBreak: 'break-all' },
   body: { fontSize: '0.85rem', borderTop: '1px solid #E5E7EB', paddingTop: '10px', display: 'flex', flexDirection: 'column', gap: '6px' },
   dataRow: { display: 'flex', justifyContent: 'space-between', alignItems: 'center' },
   label: { color: '#6B7280' },
